@@ -108,14 +108,14 @@ fn get_spiral_numbers(matrix: &Vec<Vec<i32>>) -> Vec<i32> {
 fn main() {
     let mut buf: String = String::new();
 
-    print!("Enter the row numbers: ");
+    print!("Enter the row size: ");
     io::stdout().flush().unwrap();
     io::stdin().read_line(&mut buf).unwrap();
 
     let row: usize = if let Ok(xr) = buf.trim().parse() {xr} else {0};
     buf.clear();
 
-    print!("Enter the column numbers: ");
+    print!("Enter the column size: ");
     io::stdout().flush().unwrap();
     io::stdin().read_line(&mut buf).unwrap();
 
@@ -134,6 +134,7 @@ fn main() {
 
     }
 
+    println!("The Matrix: {:?}", &matrix);
     // let matrix: Vec<Vec<i32>> = vec![vec![1,2,3,4],vec![5,6,7,8],vec![9,10,11,12],vec![13,14,15,16],vec![17,18,19,20],vec![21,22,23,24]];
     let spiral_arr: Vec<i32> = get_spiral_numbers(&matrix);
     println!("The spiral numbers are: {:?}", spiral_arr);
