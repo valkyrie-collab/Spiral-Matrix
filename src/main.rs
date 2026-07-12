@@ -28,10 +28,10 @@ fn get_spiral_numbers(matrix: &Vec<Vec<i32>>) -> Vec<i32> {
 
     loop {
 
-        println!("\nloop1");
+        // println!("\nloop1");
         while c < col_size {
 
-            println!("current_row: {} | current_col: {}", r, c);
+            // println!("current_row: {} | current_col: {}", r, c);
             if is_visited[r][c] {break;}
 
             spiral_arr.push(i32::clone(&matrix[r][c]));
@@ -44,10 +44,10 @@ fn get_spiral_numbers(matrix: &Vec<Vec<i32>>) -> Vec<i32> {
         c -= 1;
         r += 1;
 
-        println!("\nloop2");
+        // println!("\nloop2");
         while r < row_size {
 
-            println!("current_row: {} | current_col: {}", r, c);
+            // println!("current_row: {} | current_col: {}", r, c);
             if is_visited[r][c] {break;}
 
             spiral_arr.push(i32::clone(&matrix[r][c]));
@@ -60,10 +60,10 @@ fn get_spiral_numbers(matrix: &Vec<Vec<i32>>) -> Vec<i32> {
         r -= 1;
         c -= 1;
 
-        println!("\nloop3");
+        // println!("\nloop3");
         loop {
 
-            println!("current_row: {} | current_col: {}", r, c);
+            // println!("current_row: {} | current_col: {}", r, c);
             if is_visited[r][c] {c += 1; break;}
 
             spiral_arr.push(i32::clone(&matrix[r][c]));
@@ -82,14 +82,14 @@ fn get_spiral_numbers(matrix: &Vec<Vec<i32>>) -> Vec<i32> {
         println!("\nloop4");
         loop {
 
-            println!("current_row: {} | current_col: {}", r, c);
+            // println!("current_row: {} | current_col: {}", r, c);
             if !is_visited[r][c] {
                 spiral_arr.push(i32::clone(&matrix[r][c]));
                 is_visited[r][c] = true;
             } else {
                 r += 1;
                 c += 1;
-                println!("last current_row: {} | current_col: {}", r, c);
+                // println!("last current_row: {} | current_col: {}", r, c);
                 break;
             }
 
