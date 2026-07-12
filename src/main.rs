@@ -79,7 +79,7 @@ fn get_spiral_numbers(matrix: &Vec<Vec<i32>>) -> Vec<i32> {
 
         r -= 1;
 
-        println!("\nloop4");
+        // println!("\nloop4");
         loop {
 
             // println!("current_row: {} | current_col: {}", r, c);
