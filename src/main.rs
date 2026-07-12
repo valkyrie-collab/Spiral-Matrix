@@ -1,5 +1,3 @@
-//number of spiral turns = height + (height - 1)
-
 use std::io::{self, Write};
 
 fn get_spiral_numbers(matrix: &Vec<Vec<i32>>) -> Vec<i32> {
